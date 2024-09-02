@@ -4,6 +4,8 @@ description: "TIL and other stuff"
 url: "https://antonkuzmenko.dev"
 baseurl: ""
 
+author: Anton Kuzmenko
+
 # Build settings
 markdown: kramdown
 theme: minima
