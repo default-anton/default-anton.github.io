@@ -1,14 +1,8 @@
 # Site settings
-title: Anton Kuzmenko
+title: "Anton Kuzmenko’s Blog"
 description: "TIL and other stuff"
-url: "https://default-anton.github.io"
+url: "https://antonkuzmenko.dev"
 baseurl: ""
-
-author:
-  name: Anton Kuzmenko
-  email: hotk@hey.com
-  twitter: default_anton
-  github: default-anton
 
 # Build settings
 markdown: kramdown
@@ -43,6 +37,7 @@ defaults:
     values:
       layout: "post"
       comments: true
+      author: Anton Kuzmenko
 
 # License
 license: CC-BY-4.0
