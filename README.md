@@ -1,3 +1,3 @@
-## License
+Turning ideas into code, one unfinished project at a time.
 
-This blog is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). 
+[Twitter](https://x.com/default_anton), [GitHub](https://github.com/default-anton), [LinkedIn](https://linkedin.com/in/ankuzmenko)
