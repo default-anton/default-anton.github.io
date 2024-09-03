@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-<article class="max-w-[75ch] mx-auto">
-  <h1>{{ page.title }}</h1>
-  {{ content }}
+<article class="bg-white shadow-md rounded-lg overflow-hidden">
+  <div class="p-6">
+    <h1 class="text-3xl font-bold mb-6">{{ page.title }}</h1>
+    <div class="prose max-w-none">
+      {{ content }}
+    </div>
+  </div>
 </article>

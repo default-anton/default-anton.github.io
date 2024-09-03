@@ -1,10 +1,12 @@
-<header class="max-w-[75ch] mx-auto flex justify-between items-center">
-  <nav>
-    <ul>
-      <li><a href="{{ "/" | relative_url }}"><strong>{{ site.title }}</strong></a></li>
-    </ul>
-  </nav>
-  <div class="ml-auto">
-    {% include social.html %}
+<header class="bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relative_url }}" class="text-xl font-bold hover:text-gray-700 underline">{{ site.title }}</a></li>
+      </ul>
+    </nav>
+    <div class="ml-auto">
+      {% include social.html %}
+    </div>
   </div>
 </header>

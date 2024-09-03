@@ -1,5 +1,9 @@
-<footer class="max-w-[75ch] mx-auto">
-  <center>
-    <small>&copy; {{ site.time | date: '%Y' }} <a href="{{ "/" | relative_url }}">{{ site.author | default: site.title }}</a></small>
-  </center>
+<footer class="bg-gray-100 mt-8">
+  <div class="container mx-auto px-4 py-6 text-center">
+    <small class="text-gray-600">
+      &copy; {{ site.time | date: '%Y' }} <a href="{{ "/" | relative_url }}" class="hover:text-gray-900 underline">{{ site.author | default: site.title }}</a>
+      <br>
+      Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="hover:text-gray-900 underline" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
+    </small>
+  </div>
 </footer>
