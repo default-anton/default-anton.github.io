@@ -33,6 +33,7 @@ exclude:
   - vendor/ruby/
   - README.md
   - Makefile
+  - css/tailwind.css
 
 # Permalinks
 permalink: /:year/:month/:day/:title/
