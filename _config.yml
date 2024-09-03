@@ -1,27 +1,38 @@
 # Site settings
-title: "Anton Kuzmenko’s Blog"
+title: "Anton Kuzmenko"
 description: "TIL and other stuff"
+author: Anton Kuzmenko
 url: "https://antonkuzmenko.dev"
 baseurl: ""
 
-author: Anton Kuzmenko
-
 # Build settings
 markdown: kramdown
-theme: minima
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Custom theme paths
+# layouts_dir: _layouts
+# includes_dir: _includes
 
 # Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
+  - CNAME
+  - .gitignore
+  - .github
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
   - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md
+  - Makefile
 
 # Permalinks
 permalink: /:year/:month/:day/:title/
