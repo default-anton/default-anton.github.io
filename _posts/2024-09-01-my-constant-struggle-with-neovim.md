@@ -1,7 +1,6 @@
 ---
 title: "My Constant Struggle with Neovim"
 date: 2024-09-01
-categories: [blog]
 tags: [neovim]
 published: true
 ---
@@ -10,7 +9,7 @@ Have you ever felt like you are trying to tame a wild animal? A fierce, ever-cha
 
 Neovim offers a unique experience – a fully customizable and efficient development environment tailored specifically for you. However, this flexibility comes with a constant struggle to maintain and optimize your personal setup.
 
-**The main goal of a code editor is to make every aspect of coding efficient.**
+<p><mark>The main goal of a code editor is to make every aspect of coding efficient.</mark></p>
 
 But Neovim offers something much bigger than that. It gives you the ability to shape it into anything you want with enough effort and dedication. And this is where my struggle with Neovim begins.
 
