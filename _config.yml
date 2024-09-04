@@ -12,10 +12,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Custom theme paths
-# layouts_dir: _layouts
-# includes_dir: _includes
-
 # Exclude from processing
 exclude:
   - Gemfile
@@ -46,12 +42,20 @@ paginate_path: "/page:num/"
 defaults:
   -
     scope:
-      path: ""
+      path: "_posts"
       type: "posts"
     values:
       layout: "post"
       comments: true
-      author: Anton Kuzmenko
+      til: false
+  -
+    scope:
+      path: "_posts/tils"
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      til: true
 
 # License
 license: CC-BY-4.0

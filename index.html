@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="max-w-4xl mx-auto space-y-12">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <div class="mb-8">
     <p class="text-gray-600 text-sm mb-2">
       <time datetime="{{ post.date | date_to_xmlschema }}" class="inline-flex items-center">
@@ -16,7 +16,8 @@ layout: default
     </p>
     <article class="bg-white shadow-md rounded-lg overflow-hidden">
       <div class="prose prose-lg md:max-w-none mx-auto py-6 px-4 sm:px-6 md:px-8">
-        <h2 class="text-2xl font-bold"><a href="{{ post.url }}" class="hover:text-gray-700 underline">{{ post.title }}</a></h2>
+        <h2 class="text-2xl font-bold"><a href="{{ post.url }}" class="hover:text-gray-700 underline">{{ post.title
+            }}</a></h2>
         <div class="text-gray-700">
           {{ post.excerpt }}
         </div>
@@ -26,3 +27,21 @@ layout: default
   </div>
   {% endfor %}
 </div>
+
+{% if paginator.total_pages > 1 %}
+<nav class="flex justify-between items-center mt-8">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">&larr; Newer Posts</a>
+  {% else %}
+    <span class="bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed">&larr; Newer Posts</span>
+  {% endif %}
+  
+  <span class="text-gray-600">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Older Posts &rarr;</a>
+  {% else %}
+    <span class="bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed">Older Posts &rarr;</span>
+  {% endif %}
+</nav>
+{% endif %}
