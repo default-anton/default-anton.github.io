@@ -3,6 +3,7 @@ title: "My Constant Struggle with Neovim"
 date: 2024-09-01
 tags: [neovim]
 published: true
+image: /img/2024-09-01-my-constant-struggle-with-neovim.jpg
 ---
 
 Have you ever felt like you are trying to tame a wild animal? A fierce, ever-changing beast that constantly needs our attention and obedience? That's exactly how I feel about Neovim. It has become both my greatest tool and my never-ending challenge.

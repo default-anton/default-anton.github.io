@@ -3,6 +3,7 @@ title: "Tailoring Claude's Prompt for Software Development"
 date: 2024-09-04
 tags: [llm, claude, prompt]
 published: true
+image: /img/2024-09-04-modified-claude-system-prompt-for-software-development.jpg
 ---
 
 A few weeks ago, Anthropic released their [system prompts](https://docs.anthropic.com/en/release-notes/system-prompts#claude-3-5-sonnet){:target="_blank" rel="nofollow noreferrer"} for Claude models to the mere mortals. I've been coding with Claude 3.5 Sonnet since its release using my custom-built Neovim plugin. Of course, I couldn't resist the temptation to modify the system prompt for software development.
