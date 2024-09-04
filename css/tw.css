@@ -2180,6 +2180,10 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.\[\&\>pre\]\:whitespace-pre-wrap>pre {
+  white-space: pre-wrap;
+}
+
 .\[\&\>ul\>li\]\:my-1>ul>li {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -2188,4 +2192,13 @@ video {
 .\[\&\>ul\]\:my-3>ul {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.\[\&_pre\]\:my-3 pre {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.\[\&_pre\]\:whitespace-pre-wrap pre {
+  white-space: pre-wrap;
 }
