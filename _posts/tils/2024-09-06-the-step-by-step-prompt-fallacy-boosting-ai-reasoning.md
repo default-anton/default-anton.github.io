@@ -14,15 +14,15 @@ This rarely improves the outcome. The reason is that models aren't obligated to 
 
 Asking the model to write out its thought process can significantly improve reasoning and outcomes. For example:
 
-> Reason through the query inside <thinking> tags, and then provide your final response.
+> Reason through the query inside `<thinking>` tags, and then provide your final response.
 
 To enhance this approach further, consider adding a reflection step:
 
-> Reason through the query inside <thinking> tags, and then provide your final response. If you detect that you made a mistake in your reasoning at any point, correct yourself inside <reflection> tags.
+> Reason through the query inside `<thinking>` tags, and then provide your final response. If you detect that you made a mistake in your reasoning at any point, correct yourself inside `<reflection>` tags.
 
 For even more effective results, you can assign a specific role to the AI:
 
-> You are a world-class AI system, capable of complex reasoning and reflection. Reason through the query inside <thinking> tags, and then provide your final response inside <output> tags. If you detect that you made a mistake in your reasoning at any point, correct yourself inside <reflection> tags.
+> You are a world-class AI system, capable of complex reasoning and reflection. Reason through the query inside `<thinking>` tags, and then provide your final response inside `<output>` tags. If you detect that you made a mistake in your reasoning at any point, correct yourself inside `<reflection>` tags.
 
 ## Example in Action
 
