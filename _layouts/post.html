@@ -1,31 +1,29 @@
 ---
 layout: default
 ---
-<div class="max-w-4xl mx-auto space-y-12">
+<div class="max-w-3xl mx-auto space-y-12">
   <div class="mb-8">
-    <p class="text-gray-600 text-sm mb-2">
-      <time datetime="{{ page.date | date_to_xmlschema }}" class="inline-flex items-center">
-        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-        {{ page.date | date: "%B %-d, %Y" }}
-      </time>
-    </p>
-    <article class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="prose prose-base md:prose-lg md:max-w-none mx-auto py-6 px-4 sm:px-6 md:px-10 text-gray-800
+    <article class="overflow-hidden">
+      <div class="prose md:max-w-none mx-auto py-6 text-gray-800
                   [&>p]:my-3 
                   [&>ul]:my-3 [&>ul>li]:my-1
                   [&>ol]:my-3 [&>ol>li]:my-1
                   [&>blockquote]:my-3
                   [&>h2]:mt-6 [&>h2]:mb-3
                   [&>h3]:mt-5 [&>h3]:mb-2
-                  [&>pre]:my-3
-                  [&>pre]:whitespace-pre-wrap
-                  [&_pre]:my-3
-                  [&_pre]:whitespace-pre-wrap">
-        <h1 class="text-3xl font-bold">{{ page.title }}</h1>
+                  [&_pre]:max-h-[50vh] sm:[&_pre]:max-h-[40vh] md:[&_pre]:max-h-[30vh] lg:[&_pre]:max-h-[40vh]">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">{{ page.title }}</h1>
+        <p class="text-gray-600 text-sm text-center">
+          <time datetime="{{ page.date | date_to_xmlschema }}" class="inline-flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+        </p>
+        <hr class="mt-2 mb-8">
         {{ content }}
       </div>
     </article>
