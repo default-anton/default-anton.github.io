@@ -1,47 +1,48 @@
 ---
 layout: default
 ---
-<div class="max-w-3xl mx-auto space-y-12">
-  {% for post in paginator.posts %}
-  <div class="mb-8">
-    <p class="text-gray-600 text-sm mb-2">
-      <time datetime="{{ post.date | date_to_xmlschema }}" class="inline-flex items-center">
-        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-        {{ post.date | date: "%B %-d, %Y" }}
-      </time>
-    </p>
-    <article class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="prose prose-lg md:max-w-none mx-auto py-6 px-4 sm:px-6 md:px-8">
-        <h2 class="text-2xl font-bold"><a href="{{ post.url }}" class="hover:text-gray-700 underline">{{ post.title
-            }}</a></h2>
-        <div class="text-gray-700">
-          {{ post.excerpt }}
-        </div>
-        <a href="{{ post.url }}" class="inline-block text-blue-600 hover:text-blue-800 underline">Read more &rarr;</a>
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="space-y-6 mt-8">
+    {% for post in paginator.posts %}
+    <article class="border-b border-gray-200 pb-6 hover:bg-gray-50 transition duration-300">
+      <div class="flex items-center justify-between mb-2">
+        <p class="text-gray-500 text-xs">
+          <time datetime="{{ post.date | date_to_xmlschema }}" class="inline-flex items-center">
+            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            {{ post.date | date: "%B %-d, %Y" }}
+          </time>
+        </p>
+        {% if post.categories.size > 0 %}
+        <span class="text-blue-600 text-xs">{{ post.categories | first }}</span>
+        {% endif %}
       </div>
+      <h2 class="text-xl font-semibold mb-2">
+        <a href="{{ post.url }}" class="hover:text-blue-600 transition duration-300">{{ post.title }}</a>
+      </h2>
+      <div class="text-gray-600 text-sm mb-3">
+        {{ post.excerpt | strip_html | truncate: 160 }}
+      </div>
+      <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Read more &rarr;</a>
     </article>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
-
 {% if paginator.total_pages > 1 %}
-<nav class="flex justify-between items-center mt-8">
+<nav class="flex justify-between items-center mt-8 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">&larr; Newer Posts</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded">&larr; Newer Posts</a>
   {% else %}
-    <span class="bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed">&larr; Newer Posts</span>
+    <span class="bg-gray-300 text-gray-500 text-sm font-medium py-2 px-4 rounded cursor-not-allowed">&larr; Newer Posts</span>
   {% endif %}
-  
-  <span class="text-gray-600">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  
+  <span class="text-gray-600 text-sm">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Older Posts &rarr;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded">Older Posts &rarr;</a>
   {% else %}
-    <span class="bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed">Older Posts &rarr;</span>
+    <span class="bg-gray-300 text-gray-500 text-sm font-medium py-2 px-4 rounded cursor-not-allowed">Older Posts &rarr;</span>
   {% endif %}
 </nav>
 {% endif %}
