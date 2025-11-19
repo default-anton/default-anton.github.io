@@ -10,7 +10,7 @@ A few weeks ago, Anthropic released their [system prompts](https://docs.anthropi
 
 I don't have evals for this one yet, or better said, my eval is *"looks good to me"*. My wife and I have been using this prompt for a few weeks now, and we're happy with the results.
 
-## Prompt
+### Prompt
 
 ```
 <claude_info>

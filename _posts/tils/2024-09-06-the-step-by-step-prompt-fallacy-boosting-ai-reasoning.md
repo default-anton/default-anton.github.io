@@ -24,7 +24,7 @@ For even more effective results, you can assign a specific role to the AI:
 
 > You are a world-class AI system, capable of complex reasoning and reflection. Reason through the query inside `<thinking>` tags, and then provide your final response inside `<output>` tags. If you detect that you made a mistake in your reasoning at any point, correct yourself inside `<reflection>` tags.
 
-## Example in Action
+### Example in Action
 
 I am using Claude 3.5 Sonnet for this example. Notice how Claude reflects on its reasoning and corrects itself when it detects a mistake in the example thread.
 
