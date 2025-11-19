@@ -22,17 +22,12 @@ exclude:
   - CNAME
   - .gitignore
   - .github
-  - package.json
-  - package-lock.json
-  - tailwind.config.js
-  - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
   - README.md
   - Makefile
-  - css/tailwind.css
 
 # Permalinks
 permalink: /:year/:month/:day/:title/
