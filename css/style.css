@@ -1,0 +1,360 @@
+/* --- CSS Variables (Matching Tailwind Stone Palette) --- */
+:root {
+    --bg-color: #fcfbf9;
+    --text-900: #1c1917;
+    --text-800: #292524;
+    --text-600: #57534e;
+    --text-500: #78716c;
+    --text-400: #a8a29e;
+    --text-200: #e7e5e4;
+    --text-100: #f5f5f4;
+    --border-color: #d6d3d1;
+
+    --font-serif: 'Georgia', 'Cambria', 'Times New Roman', Times, serif;
+    --font-sans: system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* --- Reset & Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-800);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+::selection {
+    background: var(--border-color);
+    color: var(--text-900);
+}
+
+/* --- Layout Utilities --- */
+.container {
+    max-width: 48rem;
+    /* ~768px */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    color: var(--text-900);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+.tracking-tight {
+    letter-spacing: -0.025em;
+}
+
+/* --- Specific Components --- */
+
+/* Texture Overlay */
+.texture-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+}
+
+/* Navigation */
+nav {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-title {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-title:hover h1 {
+    color: var(--text-600);
+}
+
+.nav-icons a {
+    color: var(--text-500);
+    transition: color 0.2s;
+}
+
+.nav-icons a:hover {
+    color: var(--text-900);
+}
+
+/* Post List Item */
+.post-item {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+
+.post-item:hover h2 {
+    color: var(--text-600);
+}
+
+.post-item:hover .read-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--text-400);
+}
+
+.post-meta {
+    color: var(--text-500);
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-800);
+    font-size: 0.75rem;
+}
+
+/* Blog Post Detail */
+.back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-500);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0;
+    transition: color 0.2s;
+    text-decoration: none;
+    /* Added for anchor tag usage */
+}
+
+.back-btn:hover {
+    color: var(--text-900);
+}
+
+.back-btn svg {
+    margin-right: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.back-btn:hover svg {
+    transform: translateX(-4px);
+}
+
+.tag {
+    background-color: var(--text-200);
+    color: var(--text-600);
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+/* Typography Content (Prose) */
+.prose p {
+    margin-bottom: 1.5rem;
+    color: var(--text-800);
+    font-size: 1.125rem;
+}
+
+.prose h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.prose blockquote {
+    border-left: 4px solid var(--text-400);
+    padding-left: 1rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-600);
+}
+
+.prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.prose pre {
+    background-color: var(--text-200);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.prose code {
+    background-color: var(--text-200);
+    padding: 0.1rem 0.3rem;
+    border-radius: 2px;
+    font-size: 0.9em;
+    font-family: var(--font-mono);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-500);
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--text-900);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: var(--text-100);
+    border: 1px solid var(--text-200);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.btn-primary {
+    background-color: var(--text-800);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-600);
+}

@@ -1,12 +1,7 @@
-<header class="bg-white shadow-sm px-4">
-  <div class="container max-w-3xl mx-auto py-4 flex justify-between items-center">
-    <nav>
-      <ul>
-        <li><a href="{{ "/" | relative_url }}" class="text-xl font-bold hover:text-gray-700 underline">{{ site.title }}</a></li>
-      </ul>
-    </nav>
-    <div class="ml-auto">
-      {% include social.html %}
-    </div>
-  </div>
-</header>
+<nav class="flex justify-between items-center">
+  <a href="{{ "/" | relative_url }}" class="nav-title">
+    <h1 class="text-xl font-bold tracking-tight">{{ site.title }}</h1>
+    <p class="font-mono text-sm" style="color: var(--text-500); margin-top: 0.25rem;">Senior Software Engineer</p>
+  </a>
+  {% include social.html %}
+</nav>

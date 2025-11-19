@@ -1,31 +1,38 @@
 ---
 layout: default
 ---
-<div class="max-w-3xl mx-auto space-y-12">
-  <div class="mb-8">
-    <article class="overflow-hidden">
-      <div class="prose md:max-w-none mx-auto py-6 text-gray-800
-                  [&>p]:my-3 
-                  [&>ul]:my-3 [&>ul>li]:my-1
-                  [&>ol]:my-3 [&>ol>li]:my-1
-                  [&>blockquote]:my-3
-                  [&>h2]:mt-6 [&>h2]:mb-3
-                  [&>h3]:mt-5 [&>h3]:mb-2
-                  [&_pre]:max-h-[50vh] sm:[&_pre]:max-h-[40vh] md:[&_pre]:max-h-[30vh] lg:[&_pre]:max-h-[40vh]">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">{{ page.title }}</h1>
-        <p class="text-gray-600 text-sm text-center">
-          <time datetime="{{ page.date | date_to_xmlschema }}" class="inline-flex items-center">
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            {{ page.date | date: "%B %-d, %Y" }}
-          </time>
-        </p>
-        <hr class="mt-2 mb-8">
-        {{ content }}
-      </div>
-    </article>
+<div class="fade-in">
+  <a href="{{ "/" | relative_url }}" class="back-btn mb-8">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7" />
+    </svg>
+    Back to list
+  </a>
+
+  <header class="mb-12">
+    <!-- Tags would go here if available in front matter, e.g. page.tags -->
+    <h1 class="mb-4" style="font-size: 2.5rem; line-height: 1.2;">{{ page.title }}</h1>
+    <div class="font-mono text-sm" style="color: var(--text-500)">
+      <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+      <span class="mx-2">•</span>
+      <!-- Read time calculation could be added here -->
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+  <div class="contact-box">
+    <div>
+      <p class="font-serif font-bold mb-1">Enjoyed this read?</p>
+      <p class="text-sm" style="color: var(--text-600)">Feel free to reach out regarding this topic.</p>
+    </div>
+    <a href="mailto:{{ site.email }}" class="btn-primary" style="text-decoration: none; display: inline-block;">Contact
+      Me</a>
   </div>
 </div>
