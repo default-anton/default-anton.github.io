@@ -15,8 +15,10 @@ layout: default
     <div class="font-mono text-sm" style="color: var(--text-500)">
       <span>{{ page.date | date: "%B %-d, %Y" }}</span>
       <span class="mx-2">•</span>
-      <!-- Read time calculation could be added here -->
-      <span>5 min read</span>
+      <!-- Read time calculation -->
+      {% assign words = content | number_of_words %}
+      {% assign read_time = words | divided_by: 200 %}
+      {% if read_time < 1 %}{% assign read_time=1 %}{% endif %} <span>{{ read_time }} min read</span>
     </div>
   </header>
 
