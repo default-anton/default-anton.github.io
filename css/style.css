@@ -104,7 +104,6 @@ nav {
     cursor: pointer;
     display: block;
     text-decoration: none;
-    margin-bottom: 3rem;
 }
 .post-item:hover h2 { color: var(--text-600); }
 .post-item:hover .read-link { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--text-400); }
