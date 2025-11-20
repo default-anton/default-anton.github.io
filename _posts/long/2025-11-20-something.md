@@ -1,13 +1,13 @@
 ---
-title: "I Turned My Old PC into a Linux Gaming Console (And I Can’t Believe How Well It Works)"
+title: "I Turned My Idle PC into a Linux Gaming Console"
 date: 2025-11-19
 tags: [linux, gaming, steamos]
 published: false
 ---
 
-When Valve announced the new Steam Machine, I was genuinely excited. I’m not an avid gamer myself - my days of playing [Witcher 3](https://www.thewitcher.com/us/en/witcher3) or [Warhammer 40K](https://www.focus-entmt.com/en/games/warhammer-40000-space-marine-2) are mostly behind me. But I have a son who is just old enough that we can start playing games together on a console.
+When Valve announced the new Steam Machine, I was genuinely excited. I’m not an avid gamer myself. I built a solid PC thinking I would get back into gaming, but after playing through [Witcher 3](https://www.thewitcher.com/us/en/witcher3) and [Warhammer 40K](https://www.focus-entmt.com/en/games/warhammer-40000-space-marine-2), life happened, priorities changed, and the machine sat silent. But I have a son who is just old enough that we can start playing games together on a console.
 
-The catch? I don't own a console. But I *do* have a dedicated gaming PC collecting dust.
+The catch? I don't own a console. But I *do* have that idle PC collecting dust.
 
 I immediately thought: maybe I can just install [SteamOS](https://store.steampowered.com/steamos) on it, like what powers the [Steam Deck](https://store.steampowered.com/steamdeck/) and the future [Steam Machine](https://store.steampowered.com/sale/steammachine). After a little digging, I found out the official SteamOS isn't something they make publicly available for installation on arbitrary hardware.
 
@@ -19,7 +19,7 @@ As someone who runs two Linux servers in my home lab, I actively did **not** wan
 
 The goal was simple:
 
-**I needed a distribution that functioned exactly like SteamOS**.
+*I needed a distribution that functioned exactly like SteamOS.*
 
 I wanted a PC that would boot directly into the full-screen Steam interface, requiring no password (I know, bad security, but it’s dedicated to gaming in my living room, so I don't care), and requiring zero terminal interaction. I just wanted to turn it on and play.
 
@@ -27,27 +27,31 @@ I wanted a PC that would boot directly into the full-screen Steam interface, req
 
 I started researching. It turns out there are a few interesting solutions out there. The two primary ones that stood out were **Bazzite** and **ChimeraOS**.
 
-*   **ChimeraOS** is specifically aimed at instantly turning any PC into a gaming console, supporting thousands of games and platforms with a fully controller-compatible interface and automatic, non-intrusive updates.
-*   **Bazzite** is a custom Fedora Atomic image designed to make gaming smoother and simpler across desktop PCs, handhelds, and home theater PCs (HTPCs). They even have a specific `bazzite-deck` variant optimized for a console-like experience, booting directly to Game mode. Bazzite is also updated multiple times a week with packages from upstream Fedora, addressing common issues like out-of-date packages that plagued SteamOS.
+*   [ChimeraOS](https://chimeraos.org/) is specifically aimed at instantly turning any PC into a gaming console, supporting thousands of games and platforms with a fully controller-compatible interface and automatic, non-intrusive updates.
+*   [Bazzite](https://bazzite.gg/) is a custom Fedora Atomic image designed to make gaming smoother and simpler across desktop PCs, handhelds, and home theater PCs (HTPCs). They even have a specific `bazzite-deck` variant optimized for a console-like experience, booting directly to Game mode. Bazzite is also updated multiple times a week with packages from upstream Fedora, addressing common issues like out-of-date packages that plagued SteamOS.
 
-Bazzite, in particular, had a beautiful, stunning website. And as a person who's been using Linux for a while, I know that sometimes a beautiful website is a red flag for actual functionality.
+Bazzite, in particular, has a beautiful, stunning website. But frankly, the "immutable OS" approach felt like overkill for my needs. I haven't had much experience with atomic distributions, and I wasn't looking to learn a new paradigm. If something goes wrong on a gaming rig, I can just reinstall it in 20 minutes. I'm well-versed in standard Fedora, so sticking to a mutable, familiar base felt safer.
 
-Then there was **Nobara**.
+I also tend to be wary when a project feels *too* polished or tries to appeal to everyone. I often prefer software driven by a handful of opinionated maintainers who build exactly what they want to use.
+
+Then there was **[Nobara](https://nobaraproject.org/)**.
 
 The Nobara Project is a modified version of Fedora Linux that adds user-friendly fixes to address things typically absent from a fresh Fedora install, especially for gaming, such as WINE dependencies, 3rd party codecs, and NVIDIA drivers.
 
-Nobara stood out as probably the best option. The website looked honestly terrible - definitely made by amateurs or someone who doesn't know front-end design at all. But the main point was a large, visible download button, a clear project overview, and the promise that it fixes most issues to offer a better gaming experience out of the box.
+Nobara stood out as probably the best option. The [wiki](https://wiki.nobaraproject.org/) was easy to read and navigable, which gave me confidence that if things broke, I could fix them.
 
-It looked like it had a single maintainer or maybe just a couple of contributors, which suggests focus. And based on the description, it did everything I ever wanted: **It basically turns your PC into a Linux gaming console**.
+The main website, however, looked honestly terrible - definitely made by amateurs or someone who doesn't know front-end design at all. But to me, that's often a good sign. It suggests a project built by a true Linux user who cares more about the code than the marketing. The main point was a large, visible download button, a clear project overview, and the promise that it fixes most issues to offer a better gaming experience out of the box.
+
+It looked like it had a handful of core maintainers, which suggests focus. And based on the description, it did everything I ever wanted: **It basically turns your PC into a Linux gaming console**.
 
 ### The Installation
 
-My setup isn't a powerhouse, but it's capable: it has an AMD 5600 CPU, 16 gigabytes of RAM, and an Nvidia 4060 GPU. It’s more than enough for 1080P gaming, which is good enough for playing with my son on the TV.
+My setup is fairly modern but modest: it has an AMD 5600 CPU, 16 GB of RAM, and an Nvidia 4060 GPU. It’s perfect for 1080P gaming, which is good enough for playing with my son on the TV.
 
 The installation process was incredibly simple and quick.
 
 - I downloaded the ISO.
-- I used Balena Etcher to burn it to a USB (I did waste 15 minutes trying to find my old USB stick, since it had been a while since I reinstalled Linux).
+- I used [Balena Etcher](https://etcher.balena.io/) to burn it to a USB.
 - I reinstalled it onto my PC.
 
 The whole process probably took me 20 minutes.
