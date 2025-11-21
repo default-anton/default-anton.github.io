@@ -2,7 +2,7 @@
 title: "I Turned My Idle PC into a Linux Gaming Console"
 date: 2025-11-19
 tags: [linux, gaming, steamos]
-published: false
+published: true
 ---
 
 When Valve announced the new Steam Machine, I was genuinely excited. I’m not an avid gamer myself. I built a solid PC thinking I would get back into gaming, but after playing through [The Witcher 3](https://www.thewitcher.com/us/en/witcher3) and [Space Marine 2](https://www.focus-entmt.com/en/games/warhammer-40000-space-marine-2), life happened, priorities changed, and the machine sat silent. But I have a son who is just old enough that we can start playing games together on a console.
