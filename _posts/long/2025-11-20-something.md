@@ -50,11 +50,13 @@ My setup is fairly modern but modest: it has an AMD Ryzen 5 5600 CPU, 16 GB of R
 
 The installation process was incredibly simple and quick.
 
-- I downloaded the ISO.
+- I downloaded [the ISO](https://nobaraproject.org/download-nobara/).
 - I used [Balena Etcher](https://etcher.balena.io/) to burn it to a USB.
 - I reinstalled it onto my PC.
 
 The whole process probably took me 20 minutes.
+
+![Nobara GRUB menu](/img/2025-11-20/nobara-grub-menu.png)
 
 ### The Console Experience
 
@@ -64,17 +66,21 @@ I logged in. This was the only non-console part of the experience: I painfully e
 
 After logging into Steam, all my games were immediately playable. Out of my modest library of seven games, six worked right away: *The Witcher 3*, the *Portal* games (1 and 2), and *Warhammer 40,000: Space Marine 2*. *GTA 5* was the only exception, but honestly, I don't care about that game anymore.
 
+![Steam Library in Game Mode](/img/2025-11-20/htpc-steam-library.jpg)
+
 I cannot express how shocked I was. Seven or eight years ago, trying to play games on Linux was impossible - nothing worked. Now, the experience is smooth and simple, and it just works.
 
 We immediately installed [Sonic Racing](https://store.steampowered.com/app/212480/Sonic__AllStars_Racing_Transformed_Collection/) and [Moving Out](https://store.steampowered.com/app/996770/Moving_Out/), which were tons of fun. I’m now waiting for Black Friday to buy more games, including the [Untitled Goose Game](https://goose.game/).
-
-***[Placeholder for a screenshot of the Steam Library in Game Mode]***
 
 ### The One Glitch and the Upside of Low-Res 4K
 
 Like any good piece of tech, it wasn't *entirely* flawless, but the issues were minor. I had one issue with Nobara: an extremely annoying, jumping, flickering interface *within* the Steam UI. The moment I turned on a game, the flickering stopped.
 
+![Flickering Steam UI](/img/2025-11-20/htpc-steam-flickering.gif)
+
 After some searching, I discovered the real issue was the interface scaling. I dialed it down a notch, and it stopped.
+
+![Steam display scaling settings](/img/2025-11-20/htpc-display-scaling-flicker-fix.jpg)
 
 The only other technical curiosity I had revolved around the display setup:
 
@@ -94,7 +100,7 @@ As a techie, the lack of a password at boot bothers me slightly, but I'm getting
 
 Upgrades are handled directly in the SteamOS interface, which is amazing - I don't need to do anything, I just hit "update" and it works. Since it's technically Fedora Linux underneath, I can occasionally switch to the desktop experience, connect a mouse and keyboard, and manually upgrade the system dependencies and packages. This doesn’t sound awful to me at all.
 
-***[Placeholder for a photo of the full living room setup, showing the PC next to the TV]***
+![My HTPC setup in the living room](/img/2025-11-20/htpc-living-room.jpg)
 
 Honestly, this feels like the beginning of the end for Windows for personal use.
 
