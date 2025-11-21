@@ -2,6 +2,7 @@
 title: "I Turned My Idle PC into a Linux Gaming Console"
 date: 2025-11-19
 tags: [linux, gaming, steamos]
+image: /img/2025-11-20-i-turned-my-idle-pc-into-linux-gaming-console.jpg
 published: true
 ---
 
