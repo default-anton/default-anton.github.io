@@ -31,13 +31,12 @@ layout: default
     {{ content }}
   </div>
 
-  <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--border-color);">
-
   <div class="contact-box">
     <div>
-      <p class="font-serif font-bold mb-1">Enjoyed this read?</p>
-      <p class="text-sm" style="color: var(--text-600)">Feel free to reach out regarding this topic.</p>
+      <span class="contact-eyebrow">Stay in touch</span>
+      <p class="contact-title font-serif mb-1">I write about what I'm learning and building.</p>
+      <p class="contact-subtitle text-sm">Follow along for the ride.</p>
     </div>
-    <a href="https://x.com/{{ site.twitter_username }}" class="btn-primary" style="text-decoration: none; display: inline-block;" target="_blank" rel="noopener noreferrer">Contact me</a>
+    {% include social.html %}
   </div>
 </div>

@@ -183,6 +183,18 @@ nav {
     border-radius: 1px; /* Soft square */
 }
 
+.prose img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
 /* Syntax Highlighting Overrides (To match Stone theme) */
 .prose pre[class*="language-"] {
     background-color: var(--text-100) !important;
@@ -282,13 +294,63 @@ footer a:hover { color: var(--text-900); }
 
 /* Contact Box */
 .contact-box {
-    background-color: var(--text-100);
-    border: 1px solid var(--text-200);
-    padding: 1.5rem;
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-radius: 2px;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--text-200);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(252, 251, 249, 0.9));
+    box-shadow: 0 12px 35px rgba(28, 25, 23, 0.04);
+    flex-wrap: wrap;
+}
+.contact-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+.contact-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: linear-gradient(90deg, var(--text-300), transparent 70%);
+    opacity: 0.8;
+}
+.contact-eyebrow {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-500);
+    margin-bottom: 0.5rem;
+}
+.contact-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-900);
+}
+.contact-subtitle {
+    color: var(--text-600);
+}
+.contact-box .nav-icons a { color: var(--text-500); }
+.contact-box .nav-icons a:hover { color: var(--text-900); }
+@media (max-width: 640px) {
+    .contact-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
 }
 .btn-primary {
     background-color: var(--text-800);
